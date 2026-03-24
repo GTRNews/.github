@@ -1,0 +1,36 @@
+name: "Refactor"
+description: Code refactor without behavior change
+title: "[REFACTOR]: "
+labels: ["refactor"]
+type: "task"
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: No behavior change
+        - label: No API change
+        - label: Backward compatible
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
