@@ -1,0 +1,29 @@
+name: "Release Task"
+description: Release preparation checklist
+title: "[RELEASE]: "
+labels: ["release"]
+type: "task"
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Release Checklist
+      placeholder: |
+        - [ ] tests passing
+        - [ ] changelog updated
+        - [ ] version bumped
+        - [ ] tag created
+        - [ ] release notes
+        - [ ] artifacts uploaded
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
