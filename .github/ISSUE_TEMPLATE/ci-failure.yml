@@ -1,0 +1,43 @@
+name: "CI Failure"
+description: CI/CD pipeline failure
+title: "[CI] "
+labels: ["ci"]
+body:
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow Name
+    validations:
+      required: true
+
+  - type: input
+    id: run
+    attributes:
+      label: Run URL
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Output
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
