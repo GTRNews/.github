@@ -1,0 +1,148 @@
+name: "Task"
+description: Roadmap / backlog / implementation task
+title: "[TASK]: "
+labels: ["task"]
+type: "task"
+assignees: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Task Type
+      options:
+        - Roadmap item
+        - Backlog task
+        - Implementation
+        - Refactor
+        - Tech debt
+        - Infrastructure
+        - DevOps
+        - Research
+        - Spike
+        - Maintenance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Normal
+        - P3 - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Backend
+        - Frontend
+        - API
+        - Database
+        - CI/CD
+        - Infrastructure
+        - Docs
+        - Tests
+        - Build system
+        - Security
+        - Observability
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone / Release
+      placeholder: v1.0 / MVP / Phase 2
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short technical description
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be achieved
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - [ ] condition 1
+        - [ ] condition 2
+        - [ ] condition 3
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Implementation Steps
+      placeholder: |
+        - [ ] step 1
+        - [ ] step 2
+        - [ ] step 3
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      placeholder: |
+        - #123
+        - blocked by ...
+        - requires ...
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: Technical Notes
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options:
+        - XS
+        - S
+        - M
+        - L
+        - XL
+
+  - type: checkboxes
+    id: tracking
+    attributes:
+      label: Tracking
+      options:
+        - label: Breaking change
+        - label: Requires migration
+        - label: Requires documentation
+        - label: Requires tests
+        - label: Requires rollout
+        - label: Blocked
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - [ ] Implemented
+        - [ ] Tests added
+        - [ ] CI passing
+        - [ ] Docs updated
+        - [ ] Reviewed
+        - [ ] Merged
