@@ -1,0 +1,70 @@
+name: "Performance Issue"
+description: Report performance degradation, latency, memory, CPU issues
+title: "[PERF] "
+labels: ["performance"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version / Commit
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Performance Category
+      options:
+        - CPU usage
+        - Memory usage
+        - Startup time
+        - API latency
+        - Throughput
+        - Disk I/O
+        - Network
+        - Build time
+    validations:
+      required: true
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression
+      description: Was this working before?
+
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Expected Performance
+      placeholder: |
+        e.g. 120ms → now 900ms
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction Steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: profiling
+    attributes:
+      label: Profiling / Metrics
+      render: shell
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        OS:
+        CPU:
+        RAM:
+        Container:
