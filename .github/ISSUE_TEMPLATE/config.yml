@@ -1,0 +1,42 @@
+blank_issues_enabled: false
+
+issue_templates:
+  - name: Critical Bug
+    description: Production / security / data-loss issue
+    file: critical-bug.yml
+
+  - name: Bug Report
+    description: General bug report
+    file: bug.yml
+
+  - name: Performance Issue
+    description: Performance degradation
+    file: performance.yml
+
+  - name: Task
+    description: Implementation task
+    file: task.yml
+
+  - name: Refactor
+    description: Code refactor
+    file: refactor.yml
+
+  - name: CI Failure
+    description: CI/CD failure
+    file: ci-failure.yml
+
+  - name: Build Failure
+    description: Build system failure
+    file: build-failure.yml
+
+  - name: Release Task
+    description: Release preparation
+    file: release-task.yml
+
+  - name: Documentation
+    description: Documentation changes
+    file: docs.yml
+
+  - name: Dependency Update
+    description: Dependency updates
+    file: dependency-update.yml
