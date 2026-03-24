@@ -1,0 +1,45 @@
+name: "Dependency Update"
+description: Propose dependency update
+title: "[DEPS] "
+labels: ["dependencies"]
+body:
+  - type: input
+    id: dependency
+    attributes:
+      label: Dependency
+    validations:
+      required: true
+
+  - type: input
+    id: current
+    attributes:
+      label: Current Version
+
+  - type: input
+    id: target
+    attributes:
+      label: Target Version
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Update Type
+      options:
+        - Security
+        - Bugfix
+        - Minor
+        - Major
+    validations:
+      required: true
+
+  - type: textarea
+    id: changelog
+    attributes:
+      label: Changelog / Release Notes
+
+  - type: textarea
+    id: breaking
+    attributes:
+      label: Breaking Changes
