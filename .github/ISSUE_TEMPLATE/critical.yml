@@ -1,0 +1,121 @@
+name: "Critical Bug"
+description: Report a critical issue affecting production, security, or data integrity
+title: "[CRITICAL]: "
+labels: ["critical"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ Critical issue report. Fill all required fields.
+
+  - type: input
+    id: affected_version
+    attributes:
+      label: Affected Version / Commit
+      description: Tag, version, or commit SHA
+      placeholder: v1.2.3 / main / 1a2b3c4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical - Production down
+        - Critical - Data loss
+        - Critical - Security vulnerability
+        - Critical - API breaking
+        - Critical - Deployment blocked
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Production
+        - Staging
+        - Development
+        - CI/CD
+        - Local
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short technical description of the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What is broken? Who is affected? Scope?
+      placeholder: |
+        - Production API returning 500
+        - All users affected
+        - Data corruption possible
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal reproducible steps
+      placeholder: |
+        1. Deploy commit ...
+        2. Call endpoint ...
+        3. Observe error ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Stacktrace
+      render: shell
+      description: Paste relevant logs only
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression?
+      description: Was this working before? If yes, when did it break?
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Temporary Workaround
+      description: If any
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Critical Checklist
+      options:
+        - label: Production impacted
+        - label: No workaround available
+        - label: Data loss risk
+        - label: Security impact
+        - label: Blocking deployment
