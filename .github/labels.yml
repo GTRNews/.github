@@ -43,14 +43,14 @@
   color: 5319e7
   description: Release work
 
-- name: status: blocked
+- name: "status: blocked"
   color: d93f0b
   description: Blocked
 
-- name: status: in-progress
+- name: "status: in-progress"
   color: fbca04
   description: Work in progress
 
-- name: status: needs-review
+- name: "status: needs-review"
   color: 5319e7
   description: Waiting for review
