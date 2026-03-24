@@ -1,56 +1,56 @@
 - name: critical
-  color: b60205
+  color: "b60205"
   description: Production outage or release blocker
 
 - name: bug
-  color: d73a4a
+  color: "d73a4a"
   description: Unexpected behavior or defect
 
 - name: task
-  color: 1d76db
+  color: "1d76db"
   description: Implementation task
 
 
 - name: feature
-  color: 0e8a16
+  color: "0e8a16"
   description: New functionality
 
 - name: refactor
-  color: fbca04
+  color: "fbca04"
   description: Code refactor
 
 - name: documentation
-  color: 0075ca
+  color: "0075ca"
   description: Documentation changes
 
 - name: dependencies
-  color: 0366d6
+  color: "0366d6"
   description: Dependency updates
 
 - name: performance
-  color: ff9f1c
+  color: "ff9f1c"
   description: Performance issue
 
 - name: ci
-  color: c2e0c6
+  color: "c2e0c6"
   description: CI pipeline
 
 - name: build
-  color: f9d0c4
+  color: "f9d0c4"
   description: Build system
 
 - name: release
-  color: 5319e7
+  color: "5319e7"
   description: Release work
 
 - name: "status: blocked"
-  color: d93f0b
+  color: "d93f0b"
   description: Blocked
 
 - name: "status: in-progress"
-  color: fbca04
+  color: "fbca04"
   description: Work in progress
 
 - name: "status: needs-review"
-  color: 5319e7
+  color: "5319e7"
   description: Waiting for review
