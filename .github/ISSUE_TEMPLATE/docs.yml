@@ -1,0 +1,35 @@
+name: "Documentation"
+description: Documentation improvement or missing docs
+title: "[DOCS] "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Missing documentation
+        - Incorrect documentation
+        - Outdated documentation
+        - Improve clarity
+        - Add examples
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Affected Location
+      placeholder: README.md / docs/api.md
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Change
