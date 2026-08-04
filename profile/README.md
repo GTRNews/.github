@@ -61,7 +61,7 @@ External contributions are not open at this stage.
 
 ## Contact
 
-For inquiries, use GitHub Issues in the relevant repository.
+For general inquiries, please use our [contact form](https://youtrack.gtrnews.eu/form/da289580-0aac-4c54-bdea-afbf2aaf098e).
 
 ---
 
